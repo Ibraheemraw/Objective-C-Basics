@@ -24,11 +24,36 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%@ Ibraheem!", message);
         
+        //NSMutableString
         NSMutableString *firstName = [[NSMutableString alloc] init];
         [firstName appendString:@"Son "];
         NSLog(@"%@", firstName);
         [firstName appendString:@"Goku"];
         NSLog(@"%@", firstName);
+        
+        //NSArray
+        NSArray *characters = @[@"Spider-man",@"Wolverine",@"Blue Marvel",@"Black Pather",@"Thor"];
+        NSLog(@"My favorite character is %@", characters[0]);
+        
+        //NSMutableArray - adds modification operations
+        // addObject - Inserts a given object at the end of the array.
+        NSMutableArray *instructors = [[NSMutableArray alloc] init];
+        [instructors addObject:@"Alan"];
+        NSLog(@"%@", instructors);
+        [instructors addObject:@"Alex"];
+        NSLog(@"%@", instructors);
+        
+        //NSDictionary
+        NSDictionary *salaries = @{@"Apple Developer":@"100k",@"Samsung Engineer":@"96k",@"Google QA Person":@"150k",};
+        NSString *appleDev = salaries[@"Apple Developer"];
+        NSLog(@"The salary of an Apple Developer makes %@", appleDev);
+        
+        // NSMutableDictionary - adds modification operations
+        NSMutableDictionary *benders = [[NSMutableDictionary alloc] init];
+        benders[@"Aang"] = @"Master of All Elemnts";
+        benders[@"Katara"] = @"Water Bender";
+        NSLog(@"%@", benders);
+        
     }
     return 0;
 }
